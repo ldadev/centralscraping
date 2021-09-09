@@ -5,7 +5,7 @@ import dj_database_url
 import django_heroku
 
 
-DEBUG =  os.environ.get('DJANGO_DEBUG', default='True')
+DEBUG =  os.environ.get('DJANGO_DEBUG', default='False')
 ALLOWED_HOSTS = ['*']
 
 
