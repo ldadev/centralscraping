@@ -13,7 +13,7 @@ DATABASES = {'default': dj_database_url.config()}
 
 
 
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 
 
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
