@@ -2,13 +2,11 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from selection import *
-
 
 
 def main():
-
-    os.environ.setdefault(f'DJANGO_SETTINGS_MODULE',ambiente())
+    """Run administrative tasks."""
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tutorial.settings.production')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
