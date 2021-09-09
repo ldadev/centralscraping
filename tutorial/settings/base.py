@@ -55,7 +55,7 @@ WSGI_APPLICATION = 'tutorial.wsgi.application'
 
 
 
-LANGUAGE_CODE = 'es-co'
+LANGUAGE_CODE = 'es-es'
 
 TIME_ZONE = 'UTC'
 
