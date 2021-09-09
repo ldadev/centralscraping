@@ -4,6 +4,8 @@ from .base import *
 import dj_database_url
 import django_heroku
 
+WSGI_APPLICATION = 'tutorial.wsgi_production.application'
+
 
 DEBUG =  os.environ.get('DJANGO_DEBUG', default='False')
 ALLOWED_HOSTS = ['*']
