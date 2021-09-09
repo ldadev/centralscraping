@@ -11,6 +11,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='8+kzh+#x$x07qauzo&!fgykf_ipji
 
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,6 +48,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+             'libraries' : {
+                'staticfiles': 'django.templatetags.static'}
         },
     },
 ]
