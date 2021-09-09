@@ -2,7 +2,6 @@
 
 from .base import *
 
-WSGI_APPLICATION = 'tutorial.wsgi_development.application'
 
 
 DEBUG = True

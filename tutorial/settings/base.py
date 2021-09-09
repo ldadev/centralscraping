@@ -49,6 +49,9 @@ TEMPLATES = [
     },
 ]
 
+WSGI_APPLICATION = 'tutorial.wsgi.application'
+
+
 
 LANGUAGE_CODE = 'es-co'
 
