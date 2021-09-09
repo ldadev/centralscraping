@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Lista de libros</title>
+
+	<!--Jquery-->
+	<script src="Lista%20de%20libros_files/jquery-3.js"></script>
+
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="Lista%20de%20libros_files/bootstrap.css">
+	<script src="Lista%20de%20libros_files/bootstrap_002.js"></script>
+	<script src="Lista%20de%20libros_files/bootstrap.js"></script>
+
+	<!--Fontawesome-->
+	<link rel="stylesheet" href="Lista%20de%20libros_files/all.css">
+	
+
+
+	<!--styles base-->
+	<link rel="stylesheet" href="Lista%20de%20libros_files/base.css">	
+
+
+</head>
+	<body style="" class="">
+
+		<div class="container text-center" id="contenido">
+			<div class="row">
+				<div class="col-2"></div>
+
+				  <div class="col-8">
+					  	<div class="card text-center">
+							  <div class="card-header">
+							   Lista libros
+							  </div>
+									  <div class="card-body">
+									    	
+
+  
+
+	   <table class="table" id="datatable">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">Id</th>
+		      <th scope="col">Nombre</th>
+		      <th scope="col">Autor</th>
+		      <th scope="col">Opciones</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	
+		    <tr>
+			      <td id="id">334</td>
+			      <td id="name">xaxa</td>
+			      <td id="author">kkncsknc</td>
+
+			       <td>
+		                <button type="submit" id="btn-update" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+		                <a href="http://localhost:8000/books/delete/334">
+		                <button type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button>
+		                </a>
+		           </td>
+		    </tr>
+		    
+		    <tr>
+			      <td id="id">335</td>
+			      <td id="name">dsvsv</td>
+			      <td id="author">2323</td>
+
+			       <td>
+		                <button type="submit" id="btn-update" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+		                <a href="http://localhost:8000/books/delete/335">
+		                <button type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button>
+		                </a>
+		           </td>
+		    </tr>
+		    
+		  
+
+	     </tbody>
+       </table>
+
+	   <ul class="pagination justify-content-center">
+		
+	
+		
+		  
+			<li class="page-item active">
+			  <span class="page-link">1<span class="sr-only">(current)</span></span>
+			</li>
+		  
+		
+	
+		
+		</ul>
+	
+			
+    
+
+
+									  </div>
+							  <div class="card-footer text-muted">
+							  	 <button id="btn-create" class="btn btn-primary" type="submit">Crear Libro</button>
+
+							  </div>
+	                    </div>
+
+				  </div>
+
+
+				<div class="col-2"></div>
+	        </div>
+				
+		</div>
+
+	
+
+	<!-- Modal -->
+      <div class="modal fade" id="ModalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+
+      <form method="POST" id="formulario">
+      	<input type="hidden" name="csrfmiddlewaretoken" value="eQxjlseM8CyCt9U0iLWVGvMAfEEhKDUGbhQdlmn5APJ2Tf52qy1wObOa8xFEvKoO">
+      	<input type="hidden" name="action" value="add">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><label for="id_name">Nombre:</label> <input type="text" name="name" maxlength="100" class="form-control" required="" id="id_name" value="xaxa"></p>
+<p><label for="id_author">Autor:</label> <input type="text" name="author" maxlength="100" class="form-control" required="" id="id_author" value="kkncsknc"></p>
+            </div>
+			<style>.modal-footer{
+				padding: 0px;
+			};</style>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </div>
+		  <div id="respuesta"></div>
+        </div>
+      </form>
+    </div>
+   
+<script src="Lista%20de%20libros_files/post.js"></script>
+
+
+	
+</body></html>
