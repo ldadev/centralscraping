@@ -24,7 +24,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('course.urls')),
     
-] 
-
-if settings.DEBUG is True:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
