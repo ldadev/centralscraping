@@ -24,7 +24,7 @@ LOGGING = {
 
 
 #DEBUG =  os.environ.get('DJANGO_DEBUG', default='False')
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 
