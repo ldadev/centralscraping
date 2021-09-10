@@ -7,7 +7,7 @@ import dj_database_url
 
 
 #DEBUG =  os.environ.get('DJANGO_DEBUG', default='False')
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 DATABASES = {'default': dj_database_url.config()}
