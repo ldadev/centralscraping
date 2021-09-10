@@ -6,5 +6,5 @@ from .models import Course
 def index(request):
 
 	courses = Course.objects.all()
-	return render(request,'course/index.html',{'courses':courses})
+	return render(request,'course/base.html',{'courses':courses})
 	
