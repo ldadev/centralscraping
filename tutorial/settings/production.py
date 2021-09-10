@@ -6,14 +6,15 @@ import django_heroku
 
 
 #DEBUG =  os.environ.get('DJANGO_DEBUG', default='False')
-DEBUG = True
-ALLOWED_HOSTS = ['https://tutorialdav.herokuapp.com/']
+DEBUG = False
+ALLOWED_HOSTS = ['https://tutorialdav.herokuapp.com/','localhost',
+'127.0.0.1']
 
 
 DATABASES = {'default': dj_database_url.config()}
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 #STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
