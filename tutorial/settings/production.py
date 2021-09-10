@@ -12,7 +12,6 @@ ALLOWED_HOSTS = ['*']
 
 DATABASES = {'default': dj_database_url.config()}
 
-/
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
