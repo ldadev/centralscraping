@@ -2,7 +2,7 @@
 
 from .base import *
 import dj_database_url
-import django_heroku
+#import django_heroku
 
 
 
@@ -22,6 +22,6 @@ STATICFILES_DIRS = ['static/']
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 
