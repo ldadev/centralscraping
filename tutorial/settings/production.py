@@ -8,8 +8,7 @@ import dj_database_url
 
 #DEBUG =  os.environ.get('DJANGO_DEBUG', default='False')
 DEBUG = True
-ALLOWED_HOSTS = ['tutorialdav.herokuapp.com/','localhost', '127.0.0.1', '0.0.0.0']
-
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {'default': dj_database_url.config()}
 
