@@ -5,26 +5,9 @@ import dj_database_url
 import django_heroku
 
 
-import logging
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
-        },
-    },
-}
-
 
 #DEBUG =  os.environ.get('DJANGO_DEBUG', default='False')
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
