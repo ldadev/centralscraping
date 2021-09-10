@@ -12,7 +12,7 @@ ALLOWED_HOSTS = ['*']
 
 DATABASES = {'default': dj_database_url.config()}
 
-
+/
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
@@ -23,9 +23,8 @@ DATABASES = {'default': dj_database_url.config()}
 #STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 
 STATIC_URL = 'static/'
-
-if not DEBUG: 
-    STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_DIRS = ['/home/david/Programacion/Django_projects/tutorial/static/']
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
