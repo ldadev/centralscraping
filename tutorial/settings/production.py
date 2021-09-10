@@ -2,9 +2,8 @@
 
 from .base import *
 import dj_database_url
-#import django_heroku
+import django_heroku
 
-WHITENOISE_AUTOREFRESH = True
 
 #DEBUG =  os.environ.get('DJANGO_DEBUG', default='False')
 DEBUG = False
@@ -23,6 +22,6 @@ STATICFILES_DIRS = ['static/']
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
 
 
