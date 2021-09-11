@@ -5,6 +5,6 @@ from .views import index
 app_name = 'courses'
 
 urlpatterns = [
-    path('list/',index,name='index')
+    path('listcourse/',index,name='index')
 ]
 
