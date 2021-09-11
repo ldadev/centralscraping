@@ -7,7 +7,7 @@ import django_heroku
 
 #DEBUG =  os.environ.get('DJANGO_DEBUG', default='False')
 DEBUG = False
-ALLOWED_HOSTS = ['https://tutorialdav.herokuapp.com']
+ALLOWED_HOSTS = ['tutorialdav.herokuapp.com']
 
 DATABASES = {'default': dj_database_url.config()}
 
