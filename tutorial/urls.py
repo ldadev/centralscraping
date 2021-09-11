@@ -19,10 +19,9 @@ from django.conf.urls import include,url
 from course.views import *
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('course.urls')),
+    path('',index),
     
 ] 
 
