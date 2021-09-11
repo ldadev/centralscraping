@@ -26,19 +26,41 @@
 </head>
 <body>
 
-	<button type="button" class="btn btn-primary">Primary</button>
 
-	<h3>Hola mundo</h3>
+	<div class="container text-center" id="contenido">
+			<div class="row">
+				<div class="col-1"></div>
 
-	{%if courses%}
-	{%for course in courses%}
-	<ul>
-		<li>{{course.title}}</li>
-	</ul>
-	{%endfor%}
-	{%else%}
-	<h4>No hay cursos</h4>
-	{%endif%}
-	
+				  <div class="col-10">
+					  </div>
+					  	<div class="card text-center">
+							  <div class="card-header">
+							   {%block cardheader%}{%endblock%}
+							  </div>
+									  <div class="card-body">
+									    	{%block content%}
+
+											{%if courses%}
+											{%for course in courses%}
+											<ul>
+												<li>{{course.title}}</li>
+											</ul>
+											{%endfor%}
+											{%else%}
+											<h4>No hay cursos</h4>
+											{%endif%}
+									    	{%endblock%}
+									  </div>
+							  <div class="card-footer text-muted">
+							  	{%block cardfooter%}{%endblock%}
+							  </div>
+	                    </div>
+
+				  </div>
+
+
+				<div class="col-1"></div>
+	        </div>
+			
 </body>
 </html>
