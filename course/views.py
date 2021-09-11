@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.template.response import TemplateResponse
+
 
 from .models import Course
 
@@ -7,8 +7,7 @@ from .models import Course
 def index(request):
 
 	courses = Course.objects.all()
-	exmple = request,'course/main.html',{'courses':courses}
-	return example
+	return render(request,'course/main.html',{'courses':courses})
 
 """
 def handler500(request):
