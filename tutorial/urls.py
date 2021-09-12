@@ -21,7 +21,9 @@ from course.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index),
+    path('',IndexListView.as_view()),
+    #path('index',ajax_method,name="ajax")
+
     
 ] 
 

@@ -21,7 +21,7 @@
 	<!--Fontawesome-->
 	<link rel="stylesheet" href="{%static '/lib/fontawesome-free-5.15.4/css/all.css'%}">
 
-	<link rel="stylesheet" href="{%static '/base/css/base.css'%}">
+	<link rel="stylesheet" href="{%static 'index.css'%}">
 
 </head>
 <body>
@@ -35,20 +35,45 @@
 					  </div>
 					  	<div class="card text-center">
 							  <div class="card-header">
-							   {%block cardheader%}{%endblock%}
-							  </div>
+							   {%block cardheader%}MENU DE CENTRAL{%endblock%}
+							  </div>  
+							         
 									  <div class="card-body">
+									  	 <img class="rounded mx-auto d-block" src="{%static '/img/food.jpg'%}" alt="
+									  	 Responsive image"> 
+
+									  	   
 									    	{%block content%}
 
-											{%if courses%}
-											{%for course in courses%}
-											<ul>
-												<li>{{course.title}}</li>
-											</ul>
-											{%endfor%}
-											{%else%}
-											<h4>No hay cursos</h4>
-											{%endif%}
+											<table class="table">
+											  <thead class="table-dark">
+			
+											  	<tr>
+											  		{%for head in headers.1%}
+											  		<th>{{head}}</th>
+											  	     {%endfor%}
+											  	</tr>
+											  </thead>
+											  <tbody>
+									
+											     {%for key,food in foods.items%}
+
+											  	<tr>
+											  		<td>{{key}}</td>
+											  		
+											  		{%for item in food%}
+											  		<td>{{item}}</td>
+											  		{%endfor%} 		
+											  		
+											  	</tr>
+
+											  	{%endfor%}
+											
+										  	
+											  </tbody>
+						
+											</table>
+									
 									    	{%endblock%}
 									  </div>
 							  <div class="card-footer text-muted">
@@ -61,6 +86,13 @@
 
 				<div class="col-1"></div>
 	        </div>
+
+<script>
+
+
+
+
+</script>
 			
 </body>
 </html>

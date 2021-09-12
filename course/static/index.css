@@ -1,1 +1,5 @@
-h3 {color:red}
+.container .card img {
+	width:800px;
+	height:400px;
+	padding-bottom:10px; 
+}
