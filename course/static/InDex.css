@@ -21,7 +21,7 @@
 @media screen and (max-width: 992px) {
 	.container .card  .card-body picture img {
 		width:650px;
-		height:100px;
+		height:150px;
 	}
 }
 
