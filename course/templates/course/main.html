@@ -13,6 +13,11 @@
 	<link rel="stylesheet" href="{% static '/lib/jqueryui/jquery-ui.css'%}">
 	<script src="{% static '/lib/jqueryui/jquery-ui.min.js'%}"></script>
 
+
+	<!--stacktable-->
+	<script src="{% static '/lib/stacktable/js/stacktable.js'%}"></script>
+	<link href="{% static '/lib/stacktable/css/stacktable.css'%}" rel="stylesheet">
+
 	<!--Bootstrap-->
 	<link rel="stylesheet" href="{%static '/lib/bootstrap-5.1.0/css/bootstrap.min.css'%}">
 	<script src="{%static '/lib/bootstrap-5.1.0/js/bootstrap.bundle.min.js'%}"></script>
@@ -21,10 +26,12 @@
 	<!--Fontawesome-->
 	<link rel="stylesheet" href="{%static '/lib/fontawesome-free-5.15.4/css/all.css'%}">
 
-	<link rel="stylesheet" href="{%static 'index.css'%}">
+	<link rel="stylesheet" href="{%static 'IndeX.css'%}">
 
 </head>
 <body>
+
+	
 
 
 	<div class="container text-center" id="contenido">
@@ -39,15 +46,18 @@
 							  </div>  
 							         
 									  <div class="card-body">
-									  	 <img class="rounded mx-auto d-block" src="{%static '/img/food.jpg'%}" alt="
-									  	 Responsive image"> 
 
+									  	<picture>
+									  	 <img class="rounded mx-auto d-block" src="{%static '/img/food.jpg'%}" alt="
+									  	 Responsive image">
+									  	 </picture>
+									  	
 									  	   
 									    	{%block content%}
 
-									    	<div class="table-responsive">
+							
 
-											<table class="table">
+											<table class="table" id="data">
 											  <thead class="table-dark">
 			
 											  	<tr>
@@ -75,7 +85,7 @@
 											  </tbody>
 						
 											</table>
-										</div>
+										
 									
 									    	{%endblock%}
 									  </div>
@@ -91,10 +101,7 @@
 	        </div>
 
 <script>
-
-
-
-
+     $('#data').stacktable();
 </script>
 			
 </body>

@@ -1,0 +1,45 @@
+.container .card .card-body  picture img {
+	width:800px;
+	height:550px;
+	padding-bottom:10px;
+}
+
+
+
+@media screen and (max-width: 990px) {
+	.container .card  .card-body picture img {
+		width:600px;
+		height:400px;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.container .card  .card-body picture img {
+		width:500px;
+		height:330px;
+		padding-right:20px; 
+	}
+}
+
+
+@media screen and (max-width: 550px) {
+	.container .card  .card-body picture img {
+		width:400px;
+		height:260px;
+		padding-right:10px; 
+	}
+}
+
+
+@media screen and (max-width: 460px) {
+
+	.container .card  .card-body table {
+		max-width: 460px; 
+	} 
+
+	.container .card  .card-body picture{
+		display: none;
+	}
+}
+
+
