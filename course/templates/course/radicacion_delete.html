@@ -1,0 +1,17 @@
+{% extends 'course/base.html' %}
+
+{%block cardheader%}Eliminar revisores{%endblock%}
+
+{%block tbody%}
+
+<form method="post">
+    {% csrf_token%}
+<h4>¿Desea eliminar el registro de {{radicacion.Radicacion_Id}} con fecha {{radicacion.FechaRadicacion}}?</h4>
+
+<button class="btn btn-danger" type="submit" style="margin-left:10px;margin-right:10px">Si, eliminar</button>
+
+<a class="btn btn-primary" href="{% url 'radicacion_list'%}">Cancelar</a>
+
+  </form>
+
+{%endblock%}

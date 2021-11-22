@@ -1,1 +1,49 @@
 {% extends 'course/base.html' %}
+
+{%block cardheader%}Lista de aprobaciones{%endblock%}
+
+
+{%block thead%}
+<tr>
+    <th>Id de aprobación</th>
+    <th>Id de radicación</th>
+    <th>Aprobado Si/No</th>
+    <th>Fecha de aprobación</th>
+    <th>Aceptado Si/No</th>
+    <th>Opciones</th>
+
+</tr>
+{%endblock%}
+
+
+{%block tbody%}
+
+{%for aprobacion in aprobaciones%}
+								
+<tr>
+    <td>{{aprobacion.Aprobacion_Id}}</td>
+    <td>{{aprobacion.radicacion}}</td>
+     <td>{{aprobacion.aprobado}}</td>
+    <td>{{aprobacion.FechaAprobado}}</td>
+     <td>{{aprobacion.aceptado}}</td>
+    <td> 
+        <a href="{%url 'aprobacion_update' aprobacion.pk%}">
+        <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button></a>
+        
+        <a href="{%url 'aprobacion_delete' aprobacion.pk%}">
+        <button type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button>
+        </a>
+    </td>
+
+</tr>
+
+{%endfor%}
+{%endblock%}
+
+{%block cardfooter%}
+
+<a href="{%url 'aprobacion_create'%}"><button class="btn btn-primary btn-flat">
+          <i class="fas fa-plus"></i> Nuevo registro
+      </button></a>
+
+{%endblock%}
