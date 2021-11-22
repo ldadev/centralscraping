@@ -1,1 +1,56 @@
 {% extends 'course/base.html' %}
+
+{%block cardheader%}Lista de revisores{%endblock%}
+
+
+{%block thead%}
+<tr>
+    <th>Id de radicación</th>
+    <th>Fecha radicación</th>
+    <th>Revisor</th>
+    <th>Proveedor</th>
+    <th>Número de factura</th>
+    <th>Valor de factura</th>
+    <th>Fecha de factura</th>
+    <th>Estamento</th>
+    <th>Opciones</th>
+
+</tr>
+{%endblock%}
+
+
+
+{%block tbody%}
+
+{%for radicacion in radicaciones%}
+								
+<tr>
+    <td>{{radicacion.Radicacion_Id}}</td>
+    <td>{{radicacion.FechaRadicacion}}</td>
+     <td>{{radicacion.revisor.name}}</td>
+    <td>{{radicacion.proveedor.name}}</td>
+     <td>{{radicacion.NumeroFactura}}</td>
+    <td>{{radicacion.ValorFactura}}</td>
+    <td>{{radicacion.FechaFactura}}</td>
+    <td>{{radicacion.Estamento}}</td>
+    <td> 
+        <a href="{%url 'radicacion_update' radicacion.pk%}">
+        <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button></a>
+        
+        <a href="{%url 'radicacion_delete' radicacion.pk%}">
+        <button type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button>
+        </a>
+    </td>
+
+</tr>
+
+{%endfor%}
+{%endblock%}
+
+{%block cardfooter%}
+
+<a href="{%url 'radicacion_create'%}"><button class="btn btn-primary btn-flat">
+          <i class="fas fa-plus"></i> Nuevo registro
+      </button></a>
+
+{%endblock%}
