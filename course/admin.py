@@ -10,16 +10,16 @@ from .models import Proveedor,Revisor,Radicacion,Aprobacion
 
 @admin.register(Proveedor)
 class ProveedorAdmin(admin.ModelAdmin):
-    list_display = ('cod', 'name')
+    list_display = ('Cod_Proveedor', 'name')
 
 @admin.register(Revisor)
 class RevisorAdmin(admin.ModelAdmin):
-     list_display = ('cod', 'name')
+     list_display = ('Cod_Revisor', 'name')
 
 @admin.register(Radicacion)
 class RadicacionAdmin(admin.ModelAdmin):
-     list_display = ('radicacion_id','FechaRadicacion', 'revisor','proveedor','NumeroFactura','ValorFactura','FechaFactura','Estamento')
+     list_display = ('Radicacion_Id','FechaRadicacion', 'revisor','proveedor','NumeroFactura','ValorFactura','FechaFactura','Estamento')
 
 @admin.register(Aprobacion)
 class AprobacionAdmin(admin.ModelAdmin):
-         list_display = ('aprobacion_id','radicacion', 'aprobado','FechaAprobado','aceptado')
+         list_display = ('Aprobacion_Id','radicacion', 'aprobado','FechaAprobado','aceptado')
