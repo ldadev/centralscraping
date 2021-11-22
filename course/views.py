@@ -10,6 +10,14 @@ from django.views.generic import ListView
 
 from django.http import JsonResponse
 
+from django.urls import reverse_lazy
+from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView,CreateView,UpdateView,DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin,PermissionRequiredMixin
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+from .forms import *
+
 
 
 class IndexListView(ListView):
@@ -48,6 +56,16 @@ class RevisorListView(ListView):
 	def get_context_data(self,**kwargs):
 		context = super().get_context_data(**kwargs)
 		context['revisores'] = Revisor.objects.all() 
+		return context
+
+class revisor_create(LoginRequiredMixin,CreateView):
+	model = Revisor
+	form_class = RevisorForm
+	template_name = 'revisor_create.html'
+	success_url = reverse_lazy('revisor_list')
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
 		return context
 
 	

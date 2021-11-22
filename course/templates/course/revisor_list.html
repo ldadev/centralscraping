@@ -8,6 +8,7 @@
 <tr>
     <th>Nit</th>
     <th>Nombre</th>
+    <th>Opciones</th>
 
 </tr>
 {%endblock%}
@@ -31,4 +32,12 @@
 </tr>
 
 {%endfor%}
+{%endblock%}
+
+{%block cardfooter%}
+
+<a href="{%url 'revisor_create'%}"><button class="btn btn-primary btn-flat">
+          <i class="fas fa-plus"></i> Nuevo registro
+      </button></a>
+
 {%endblock%}

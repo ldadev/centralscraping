@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('',IndexListView.as_view()),
     #path('index',ajax_method,name="ajax")
-    path('',RevisorListView.as_view())
+    path('',RevisorListView.as_view(),name='revisor_list'),
+    path('add/',revisor_create.as_view(), name='revisor_create'),
 
     
 ] 
