@@ -1,1 +1,43 @@
 {% extends 'course/base.html' %}
+
+{%block cardheader%}Lista de proveedores{%endblock%}
+
+
+{%block thead%}
+<tr>
+    <th>Nit</th>
+    <th>Nombre</th>
+    <th>Opciones</th>
+
+</tr>
+{%endblock%}
+
+
+{%block tbody%}
+
+{%for proveedor in proveedores%}
+								
+<tr>
+    <td>{{proovedor.Cod_Proveedor}}</td>
+    <td>{{proovedor.name}}</td>
+    <td> 
+        <a href="{%url 'proveedor_update' proovedor.pk%}">
+        <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button></a>
+        
+        <a href="{%url 'proveedor_delete' proveedor.pk%}">
+        <button type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button>
+        </a>
+    </td>
+
+</tr>
+
+{%endfor%}
+{%endblock%}
+
+{%block cardfooter%}
+
+<a href="{%url 'revisor_create'%}"><button class="btn btn-primary btn-flat">
+          <i class="fas fa-plus"></i> Nuevo registro
+      </button></a>
+
+{%endblock%}
