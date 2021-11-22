@@ -38,7 +38,7 @@ class AprobacionForm(forms.ModelForm):
             'radicacion':forms.Select(choices=Radicacion.objects.all()),
             #'radicacion':TextInput(attrs={'placeholder':'Ingrese el código de la radicación','class':'form-control'}),
             'aprobado':forms.TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
-            'FechaAprobado':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
+            'FechaAprobado':forms.DateInput(attrs={'type':'date','class':'form-control'}),
             'aceptado':forms.TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
 
 		}
@@ -51,14 +51,14 @@ class RadicacionForm(forms.ModelForm):
 		fields = 'Radicacion_Id','FechaRadicacion','revisor','proveedor','NumeroFactura','ValorFactura','FechaFactura','Estamento'
 		widgets = {
 		    'Cod_Radicacion':forms.TextInput(attrs={'placeholder':'Ingrese el código de radicación','class':'form-control'}),
-		    'FechaRadicacion':forms.DateInput(attrs={'type':'date'}),
+		    'FechaRadicacion':forms.DateInput(attrs={'type':'date','class':'form-control'}),
             #'revisor':forms.TextInput(attrs={'placeholder':'Ingrese el código del revisor','class':'form-control'}),
              'revisor':forms.Select(choices=Revisor.objects.all(),attrs={'class':'form-control'}),
 		    #'proveedor':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
-             'proveedor':forms.Select(choices=Proveedor.objects.all()),
+             'proveedor':forms.Select(choices=Proveedor.objects.all(),attrs={'placeholder':'Ingrese el proveedor','class':'form-control'}),
              'NumeroFactura':forms.TextInput(attrs={'placeholder':'Ingrese el número de la factura','class':'form-control'}),
 		    'ValorFactura':forms.TextInput(attrs={'placeholder':'Ingrese el valor de la factura','class':'form-control'}),
-            'FechaFactura':forms.TextInput(attrs={'placeholder':'Ingrese la fecha de la factura','class':'form-control'}),
+            'FechaFactura': forms.DateInput(attrs={'type':'date','class':'form-control'}),
             'Estamento':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del estamento','class':'form-control'}),
 		}
 
