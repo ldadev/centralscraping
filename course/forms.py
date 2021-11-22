@@ -1,28 +1,29 @@
-from django.forms import *
+from django.forms import forms
+from django import forms
 from .models import Revisor,Radicacion,Proveedor,Aprobacion
 from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render
 
-class RevisorForm(ModelForm):
+class RevisorForm(forms.ModelForm):
 
 	class Meta:
 		model = Revisor
 		fields = 'Cod_Revisor','name'
 		widgets = {
-		    'Cod_Revisor':TextInput(attrs={'placeholder':'Ingrese el código del revisor','class':'form-control'}),
-		    'name':TextInput(attrs={'placeholder':'Ingrese el nombre del revisor','class':'form-control'}),
+		    'Cod_Revisor':forms.TextInput(attrs={'placeholder':'Ingrese el código del revisor','class':'form-control'}),
+		    'name':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del revisor','class':'form-control'}),
 
 		}
 
 
-class ProveedorForm(ModelForm):
+class ProveedorForm(forms.ModelForm):
 
 	class Meta:
 		model = Proveedor
 		fields = 'Cod_Proveedor','name'
 		widgets = {
-		    'Cod_Proveedor':TextInput(attrs={'placeholder':'Ingrese el código del proveedor','class':'form-control'}),
-		    'name':TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
+		    'Cod_Proveedor':forms.TextInput(attrs={'placeholder':'Ingrese el código del proveedor','class':'form-control'}),
+		    'name':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
 
 		}
 
@@ -41,21 +42,21 @@ class AprobacionForm(forms.ModelForm):
 
 		}
 
-class RadicacionForm(ModelForm):
+class RadicacionForm(forms.ModelForm):
 
 
 	class Meta:
 		model = Radicacion
 		fields = 'Radicacion_Id','FechaRadicacion','revisor','proveedor','NumeroFactura','ValorFactura','FechaFactura','Estamento'
 		widgets = {
-		    'Cod_Radicacion':TextInput(attrs={'placeholder':'Ingrese el código de radicación','class':'form-control'}),
-		    'FechaRadicacion':TextInput(attrs={'placeholder':'Ingrese la fecha de radicación','class':'form-control'}),
-            'revisor':TextInput(attrs={'placeholder':'Ingrese el código del revisor','class':'form-control'}),
-		    'proveedor':TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
-             'NumeroFactura':TextInput(attrs={'placeholder':'Ingrese el número de la factura','class':'form-control'}),
-		    'ValorFactura':TextInput(attrs={'placeholder':'Ingrese el valor de la factura','class':'form-control'}),
-            'FechaFactura':TextInput(attrs={'placeholder':'Ingrese la fecha de la factura','class':'form-control'}),
-            'Estamento':TextInput(attrs={'placeholder':'Ingrese el nombre del estamento','class':'form-control'}),
+		    'Cod_Radicacion':forms.TextInput(attrs={'placeholder':'Ingrese el código de radicación','class':'form-control'}),
+		    'FechaRadicacion':forms.TextInput(attrs={'placeholder':'Ingrese la fecha de radicación','class':'form-control'}),
+            'revisor':forms.TextInput(attrs={'placeholder':'Ingrese el código del revisor','class':'form-control'}),
+		    'proveedor':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
+             'NumeroFactura':forms.TextInput(attrs={'placeholder':'Ingrese el número de la factura','class':'form-control'}),
+		    'ValorFactura':forms.TextInput(attrs={'placeholder':'Ingrese el valor de la factura','class':'form-control'}),
+            'FechaFactura':forms.TextInput(attrs={'placeholder':'Ingrese la fecha de la factura','class':'form-control'}),
+            'Estamento':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del estamento','class':'form-control'}),
 		}
 
 
