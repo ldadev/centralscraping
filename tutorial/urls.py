@@ -25,6 +25,8 @@ urlpatterns = [
     #path('index',ajax_method,name="ajax")
     path('',RevisorListView.as_view(),name='revisor_list'),
     path('add/',revisor_create.as_view(), name='revisor_create'),
+    path('update/<int:pk>',revisor_update.as_view(), name='revisor_update'),
+    path('delete/<int:pk>',revisor_delete.as_view(), name='revisor_delete'),
 
     
 ] 

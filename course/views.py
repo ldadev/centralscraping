@@ -68,4 +68,27 @@ class revisor_create(LoginRequiredMixin,CreateView):
 		context = super().get_context_data(**kwargs)
 		return context
 
-	
+
+class revisor_update(LoginRequiredMixin,UpdateView):
+
+	model = Revisor
+	form_class = RevisorForm
+	template_name = 'course/revisor_create.html'
+	success_url = reverse_lazy('revisor_list')
+
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
+
+
+class revisor_delete(LoginRequiredMixin,DeleteView):
+    model = Revisor
+    template_name = 'course/revisor_delete.html'
+    success_url = reverse_lazy('revisor_list')
+    url_redirect = success_url
+
+
+    def get_context_data(self,**kwargs):
+    	context = super().get_context_data(**kwargs)
+    	return context
