@@ -26,7 +26,7 @@ class Proveedor(models.Model):
 	name = models.TextField(verbose_name="Nombre")
 	
 	def __str__(self):
-		return f'{self.cod}'
+		return f'{self.name}'
 
 
 class Revisor(models.Model):
@@ -35,7 +35,7 @@ class Revisor(models.Model):
 	name = models.TextField(verbose_name="Nombre")
 	
 	def __str__(self):
-		return f'{self.cod}'
+		return f'{self.name}'
 
 class Radicacion(models.Model):
 
@@ -55,7 +55,7 @@ class Aprobacion(models.Model):
 
 	radicacion = models.ForeignKey(Radicacion,on_delete=models.CASCADE,verbose_name="Radicacion")
 	aprobado =  models.CharField(max_length=50,verbose_name="Aprobado si/no")
-	fechaparobado = models.DateField(verbose_name="Fecha de aprobación")
+	FechaAprobado = models.DateField(verbose_name="Fecha de aprobación")
 	aceptado =  models.CharField(max_length=50,verbose_name="Aceptado si/no")
 
 	
