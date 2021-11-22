@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-from .models import Signature
+from .models import Proveedor
 from django.views.generic import ListView
 
 from django.http import JsonResponse
@@ -14,7 +14,7 @@ from django.http import JsonResponse
 
 class IndexListView(ListView):
 
-	model = Signature
+	model = Proveedor
 	template_name = 'course/main.html'
 
 	def get_food(self):
