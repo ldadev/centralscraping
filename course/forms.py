@@ -35,7 +35,7 @@ class AprobacionForm(ModelForm):
 		    'Aprobacion_Id':TextInput(attrs={'placeholder':'Ingrese el código de la aprobación','class':'form-control'}),
 		    'radicacion':TextInput(attrs={'placeholder':'Ingrese el código de la radicación','class':'form-control'}),
             'aprobado':TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
-            #'FechaAprobado':DateField(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
+            'FechaAprobado':TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
             'aceptado':TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
 
 		}
@@ -53,8 +53,8 @@ class RadicacionForm(ModelForm):
 		    'proveedor':TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
              'NumeroFactura':TextInput(attrs={'placeholder':'Ingrese el número de la factura','class':'form-control'}),
 		    'ValorFactura':TextInput(attrs={'placeholder':'Ingrese el valor de la factura','class':'form-control'}),
-            'FechaFactura':DateField(attrs={'placeholder':'Ingrese la fecha de la factura','class':'form-control'}),
-            'Estamento':DateField(attrs={'placeholder':'Ingrese el nombre del estamento','class':'form-control'}),
+            'FechaFactura':TextInput(attrs={'placeholder':'Ingrese la fecha de la factura','class':'form-control'}),
+            'Estamento':TextInput(attrs={'placeholder':'Ingrese el nombre del estamento','class':'form-control'}),
 		}
 
 
