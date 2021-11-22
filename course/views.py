@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-from .models import Course
+from .models import Signature
 from django.views.generic import ListView
 
 from django.http import JsonResponse
