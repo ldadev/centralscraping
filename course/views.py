@@ -47,6 +47,8 @@ class IndexListView(ListView):
 		context['headers'],context['foods'] = self.get_food()
 		return context
 
+#Vistas de los revisores
+
 
 class RevisorListView(ListView):
 
@@ -86,6 +88,147 @@ class revisor_delete(LoginRequiredMixin,DeleteView):
     model = Revisor
     template_name = 'course/revisor_delete.html'
     success_url = reverse_lazy('revisor_list')
+    url_redirect = success_url
+
+
+    def get_context_data(self,**kwargs):
+    	context = super().get_context_data(**kwargs)
+    	return context
+
+#Vistas de los proveedores
+
+
+class ProveedorListView(ListView):
+
+	model = Proveedor
+	template_name = 'course/proveedor_list.html'
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		context['proveedores'] = Proveedor.objects.all() 
+		return context
+
+class proveedor_create(LoginRequiredMixin,CreateView):
+	model = Proveedor
+	form_class = ProveedorForm
+	template_name = 'course/proveedor_create.html'
+	success_url = reverse_lazy('proveedor_list')
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
+
+
+class proveedor_update(LoginRequiredMixin,UpdateView):
+
+	model = Proveedor
+	form_class = ProveedorForm
+	template_name = 'course/revisor_create.html'
+	success_url = reverse_lazy('revisor_list')
+
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
+
+class proveedor_delete(LoginRequiredMixin,DeleteView):
+    model = Revisor
+    template_name = 'course/proveedor_delete.html'
+    success_url = reverse_lazy('proveedor_list')
+    url_redirect = success_url
+
+
+    def get_context_data(self,**kwargs):
+    	context = super().get_context_data(**kwargs)
+    	return context
+
+
+#Vistas de radicaciones
+
+
+class RadicacionListView(ListView):
+
+	model = Radicacion
+	template_name = 'course/radicacion_list.html'
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		context['radicaciones'] = Radicacion.objects.all() 
+		return context
+
+class radicacion_create(LoginRequiredMixin,CreateView):
+	model = Radicacion
+	form_class = RadicacionForm
+	template_name = 'course/radicacion_create.html'
+	success_url = reverse_lazy('proveedor_list')
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
+
+
+class radicacion_update(LoginRequiredMixin,UpdateView):
+
+	model = Radicacion
+	form_class = RadicacionForm
+	template_name = 'course/radicacion_create.html'
+	success_url = reverse_lazy('radicacion_list')
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
+
+class radicacion_delete(LoginRequiredMixin,DeleteView):
+    model = Radicacion
+    template_name = 'course/radicacion_delete.html'
+    success_url = reverse_lazy('radicacion_list')
+    url_redirect = success_url
+
+
+    def get_context_data(self,**kwargs):
+    	context = super().get_context_data(**kwargs)
+    	return context
+
+
+#Vistas de aprobaciones
+
+
+class AprobacionListView(ListView):
+
+	model = Aprobacion
+	template_name = 'course/aprobacion_list.html'
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		context['aprobaciones'] = Aprobacion.objects.all() 
+		return context
+
+class aprobacion_create(LoginRequiredMixin,CreateView):
+	model = Aprobacion
+	form_class = AprobacionForm
+	template_name = 'course/aprobacion_create.html'
+	success_url = reverse_lazy('aprobacion_list')
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
+
+
+class aprobacion_update(LoginRequiredMixin,UpdateView):
+
+	model = Aprobacion
+	form_class = AprobacionForm
+	template_name = 'course/aprobacion_create.html'
+	success_url = reverse_lazy('aprobacion_list')
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
+
+class aprobacion_delete(LoginRequiredMixin,DeleteView):
+    model = Aprobacion
+    template_name = 'course/aprobacion_delete.html'
+    success_url = reverse_lazy('aprobacion_list')
     url_redirect = success_url
 
 
