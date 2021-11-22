@@ -14,7 +14,7 @@ from django.http import JsonResponse
 
 class IndexListView(ListView):
 
-	model = Course
+	model = Signature
 	template_name = 'course/main.html'
 
 	def get_food(self):
