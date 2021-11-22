@@ -1,0 +1,15 @@
+{% extends 'course/base.html' %}
+
+{%block cardheader%}Edición de proveedores{%endblock%}
+
+{%block tbody%}
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <br><br>
+    <button type = "submit" class="btn btn-primary btn-flat">
+        <i class="fas fa-save"></i> Guardar
+      </button>
+  </form>
+{%endblock%}
