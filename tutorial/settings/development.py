@@ -18,26 +18,26 @@ DATABASES = {
 
 """
 
-
 DATABASES = {
 
     'default': {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'dd8p2lpah7864b',
+        'NAME': 'central',
 
-        'USER': 'qxxqgbbbfktwgm',
+        'USER': 'dadev',
 
-        'PASSWORD': '81d1a7e14257eb09c9dacb171b065603e31e0fc925068d25abcf13093c73fb15',
+        'PASSWORD': '1580',
 
-        'HOST': 'ec2-44-199-19-138.compute-1.amazonaws.com',
+        'HOST': 'localhost',
 
-        'PORT': '',
+        'PORT': '5432',
 
     }
 
 }
+
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ['static/']
