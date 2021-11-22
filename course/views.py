@@ -132,7 +132,7 @@ class proveedor_update(LoginRequiredMixin,UpdateView):
 		return context
 
 class proveedor_delete(LoginRequiredMixin,DeleteView):
-    model = Revisor
+    model = Proveedor
     template_name = 'course/proveedor_delete.html'
     success_url = reverse_lazy('proveedor_list')
     url_redirect = success_url
