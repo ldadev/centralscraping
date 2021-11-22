@@ -35,7 +35,7 @@ class AprobacionForm(ModelForm):
 		    'Aprobacion_Id':TextInput(attrs={'placeholder':'Ingrese el código de la aprobación','class':'form-control'}),
 		    'radicacion':TextInput(attrs={'placeholder':'Ingrese el código de la radicación','class':'form-control'}),
             'aprobado':TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
-            'FechaAprobado':DateField(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
+            #'FechaAprobado':DateField(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
             'aceptado':TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
 
 		}
