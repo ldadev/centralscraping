@@ -52,8 +52,10 @@ class RadicacionForm(forms.ModelForm):
 		widgets = {
 		    'Cod_Radicacion':forms.TextInput(attrs={'placeholder':'Ingrese el código de radicación','class':'form-control'}),
 		    'FechaRadicacion':forms.TextInput(attrs={'placeholder':'Ingrese la fecha de radicación','class':'form-control'}),
-            'revisor':forms.TextInput(attrs={'placeholder':'Ingrese el código del revisor','class':'form-control'}),
-		    'proveedor':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
+            #'revisor':forms.TextInput(attrs={'placeholder':'Ingrese el código del revisor','class':'form-control'}),
+             'revisor':forms.Select(choices=Revisor.objects.all()),
+		    #'proveedor':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
+             'proveedor':forms.Select(choices=Proveedor.objects.all()),
              'NumeroFactura':forms.TextInput(attrs={'placeholder':'Ingrese el número de la factura','class':'form-control'}),
 		    'ValorFactura':forms.TextInput(attrs={'placeholder':'Ingrese el valor de la factura','class':'form-control'}),
             'FechaFactura':forms.TextInput(attrs={'placeholder':'Ingrese la fecha de la factura','class':'form-control'}),
