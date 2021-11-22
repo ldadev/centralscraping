@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-from .models import Proveedor
+from .models import Revisor,Proveedor,Radicacion,Aprobacion
 from django.views.generic import ListView
 
 from django.http import JsonResponse
@@ -37,6 +37,17 @@ class IndexListView(ListView):
 	def get_context_data(self,**kwargs):
 		context = super().get_context_data(**kwargs)
 		context['headers'],context['foods'] = self.get_food()
+		return context
+
+
+class RevisorListView(ListView):
+
+	model = Revisor
+	template_name = 'course/revisor_list.html'
+
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		context['revisores'] = Revisor.objects.all() 
 		return context
 
 	

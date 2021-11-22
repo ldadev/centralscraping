@@ -1,0 +1,96 @@
+<!--{%load static%}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<!--Jquery-->
+
+	<script src="{% static '/lib/Jquery3.6.0/jquery-3.6.0.js'%}"></script>
+
+	<link rel="stylesheet" href="{% static '/lib/jqueryui/jquery-ui.css'%}">
+	<script src="{% static '/lib/jqueryui/jquery-ui.min.js'%}"></script>
+
+
+	<!--stacktable-->
+	<script src="{% static '/lib/stacktable/js/stacktable.js'%}"></script>
+	<link href="{% static '/lib/stacktable/css/stacktable.css'%}" rel="stylesheet">
+
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="{%static '/lib/bootstrap-5.1.0/css/bootstrap.min.css'%}">
+	<script src="{%static '/lib/bootstrap-5.1.0/js/bootstrap.bundle.min.js'%}"></script>
+
+
+	<!--Fontawesome-->
+	<link rel="stylesheet" href="{%static '/lib/fontawesome-free-5.15.4/css/all.css'%}">
+
+	<link rel="stylesheet" href="{%static 'InDex.css'%}">
+
+</head>
+<body>
+
+	
+
+
+	<div class="container text-center" id="contenido">
+			<div class="row">
+				<div class="col-1"></div>
+
+				  <div class="col-10">
+					  </div>
+					  	<div class="card text-center">
+							  <div class="card-header">
+							   {%block cardheader%}MENU DE CENTRAL{%endblock%}
+							  </div>  
+							         
+									  <div class="card-body">
+
+									  	 
+									  	
+							
+									    	{%block content%}
+
+							
+
+											<table class="table" id="data">
+											  <thead class="table-dark">
+			
+											  	<tr>
+											  	
+											  	</tr>
+											  </thead>
+											  <tbody>
+									
+						
+
+											  	<tr>
+											  		<td></td>
+											  	
+											  	</tr>
+											
+										  	
+											  </tbody>
+						
+											</table>
+										
+									
+									    	{%endblock%}
+									  </div>
+							  <div class="card-footer text-muted">
+							  	{%block cardfooter%}{%endblock%}
+							  </div>
+	                    </div>
+
+				  </div>
+
+
+				<div class="col-1"></div>
+	        </div>
+
+<script>
+</script>
+			
+</body>
+</html>
