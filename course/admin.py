@@ -10,7 +10,7 @@ from .models import Proveedor,Revisor,Radicacion,Aprobacion
 
 @admin.register(Proveedor)
 class ProveedorAdmin(admin.ModelAdmin):
-    list_display = ('Cod_Proveedor', 'name')
+    list_display = ('id','Cod_Proveedor', 'name')
 
 @admin.register(Revisor)
 class RevisorAdmin(admin.ModelAdmin):
