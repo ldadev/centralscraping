@@ -26,18 +26,18 @@ class ProveedorForm(ModelForm):
 
 		}
 
-class AprobacionForm(ModelForm):
+class AprobacionForm(forms.ModelForm):
 
 	class Meta:
 		model = Aprobacion
 		fields = 'Aprobacion_Id','radicacion','aprobado','FechaAprobado','aceptado'
 		widgets = {
-		    'Aprobacion_Id':TextInput(attrs={'placeholder':'Ingrese el código de la aprobación','class':'form-control'}),
-            'radicacion':ChoiceField(choices=Radicacion.objects.all()),
+		    'Aprobacion_Id':forms.TextInput(attrs={'placeholder':'Ingrese el código de la aprobación','class':'form-control'}),
+            'radicacion':forms.ChoiceField(choices=Radicacion.objects.all()),
             #'radicacion':TextInput(attrs={'placeholder':'Ingrese el código de la radicación','class':'form-control'}),
-            'aprobado':TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
-            'FechaAprobado':TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
-            'aceptado':TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
+            'aprobado':forms.TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
+            'FechaAprobado':forms.TextInput(attrs={'placeholder':'Ingrese el nombre del proveedor','class':'form-control'}),
+            'aceptado':forms.TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
 
 		}
 
