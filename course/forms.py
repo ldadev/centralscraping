@@ -45,7 +45,7 @@ class RadicacionForm(ModelForm):
 
 	class Meta:
 		model = Radicacion
-		fields = 'Radicacion_Id','FechaRadicacion','Revisor','proveedor''NumeroFactura','ValorFactura','FechaFactura','Estamento'
+		fields = 'Radicacion_Id','FechaRadicacion','Revisor','proveedor','NumeroFactura','ValorFactura','FechaFactura','Estamento'
 		widgets = {
 		    'Cod_Radicacion':TextInput(attrs={'placeholder':'Ingrese el código de radicación','class':'form-control'}),
 		    'FechaRadicacion':TextInput(attrs={'placeholder':'Ingrese la fecha de radicación','class':'form-control'}),
