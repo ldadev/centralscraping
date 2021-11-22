@@ -124,7 +124,7 @@ class proveedor_update(LoginRequiredMixin,UpdateView):
 	model = Proveedor
 	form_class = ProveedorForm
 	template_name = 'course/revisor_create.html'
-	success_url = reverse_lazy('revisor_list')
+	success_url = reverse_lazy('proveedor_list')
 
 
 	def get_context_data(self,**kwargs):
@@ -160,7 +160,7 @@ class radicacion_create(LoginRequiredMixin,CreateView):
 	model = Radicacion
 	form_class = RadicacionForm
 	template_name = 'course/radicacion_create.html'
-	success_url = reverse_lazy('proveedor_list')
+	success_url = reverse_lazy('radicacion_list')
 
 	def get_context_data(self,**kwargs):
 		context = super().get_context_data(**kwargs)
