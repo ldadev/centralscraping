@@ -58,17 +58,22 @@
 											  <thead class="table-dark">
 			
 											  	<tr>
+                                                      <th>Nit</th>
+                                                      <th>Nombre</th>
 											  	
 											  	</tr>
 											  </thead>
 											  <tbody>
-									
-						
 
+                                                {%for revisor in revisores%}
+								
 											  	<tr>
-											  		<td></td>
+											  		<td>revisor.Cod_Revisor</td>
+                                                    <td>revisor.name</td>
 											  	
 											  	</tr>
+                                                
+                                                  {%endfor%}
 											
 										  	
 											  </tbody>
