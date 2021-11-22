@@ -12,8 +12,8 @@ class RevisorForm(ModelForm):
 		model = Revisor
 		fields = 'Cod_Revisor','name'
 		widgets = {
-		    'Cod_Revisor':TextInput(attrs={'placeholder':'Ingrese el código del revisor'}),
-		    'name':TextInput(attrs={'placeholder':'Ingrese el nombre del revisor'}),
+		    'Cod_Revisor':TextInput(attrs={'placeholder':'Ingrese el código del revisor','class':'form-control'}),
+		    'name':TextInput(attrs={'placeholder':'Ingrese el nombre del revisor','class':'form-control'}),
 
 		}
 	
