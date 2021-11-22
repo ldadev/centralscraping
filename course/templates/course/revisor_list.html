@@ -3,18 +3,6 @@
 
 {%block cardheader%}Lista de revisores{%endblock%}
 
-{%block tbody%}
-
-{%for revisor in revisores%}
-								
-<tr>
-    <td>revisor.Cod_Revisor</td>
-  <td>revisor.name</td>
-
-</tr>
-
-{%endfor%}
-{%endblock%}
 
 {%block thead%}
 <tr>
@@ -22,4 +10,18 @@
     <th>Nombre</th>
 
 </tr>
+{%endblock%}
+
+
+{%block tbody%}
+
+{%for revisor in revisores%}
+								
+<tr>
+    <td>revisor.Cod_Revisor</td>
+    <td>revisor.name</td>
+
+</tr>
+
+{%endfor%}
 {%endblock%}
