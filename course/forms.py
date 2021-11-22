@@ -5,9 +5,6 @@ from django.shortcuts import render
 
 class RevisorForm(ModelForm):
 
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
-
 	class Meta:
 		model = Revisor
 		fields = 'Cod_Revisor','name'
@@ -20,9 +17,6 @@ class RevisorForm(ModelForm):
 
 class ProveedorForm(ModelForm):
 
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
-
 	class Meta:
 		model = Proveedor
 		fields = 'Cod_Proveedor','name'
@@ -33,9 +27,6 @@ class ProveedorForm(ModelForm):
 		}
 
 class AprobacionForm(ModelForm):
-
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
 
 	class Meta:
 		model = Aprobacion
@@ -51,8 +42,6 @@ class AprobacionForm(ModelForm):
 
 class RadicacionForm(ModelForm):
 
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
 
 	class Meta:
 		model = Radicacion
