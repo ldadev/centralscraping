@@ -5,6 +5,7 @@
 
 {%block thead%}
 <tr>
+    <th>Id</th>
     <th>Nit</th>
     <th>Nombre</th>
     <th>Opciones</th>
@@ -18,6 +19,7 @@
 {%for proveedor in proveedores%}
 								
 <tr>
+    <td>{{proveedor.id}}</td>
     <td>{{proveedor.Cod_Proveedor}}</td>
     <td>{{proveedor.name}}</td>
     <td> 

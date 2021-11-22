@@ -5,6 +5,7 @@
 
 {%block thead%}
 <tr>
+    <th>Id</th>
     <th>Id de radicación</th>
     <th>Fecha radicación</th>
     <th>Revisor</th>
@@ -25,6 +26,7 @@
 {%for radicacion in radicaciones%}
 								
 <tr>
+    <td>{{radicacion.id}}</td>
     <td>{{radicacion.Radicacion_Id}}</td>
     <td>{{radicacion.FechaRadicacion}}</td>
      <td>{{radicacion.revisor.name}}</td>

@@ -5,6 +5,7 @@
 
 {%block thead%}
 <tr>
+    <th>Id</th>
     <th>Id de aprobación</th>
     <th>Id de radicación</th>
     <th>Aprobado Si/No</th>
@@ -21,6 +22,7 @@
 {%for aprobacion in aprobaciones%}
 								
 <tr>
+    <td>{{aprobacion.id}}</td>
     <td>{{aprobacion.Aprobacion_Id}}</td>
     <td>{{aprobacion.radicacion}}</td>
      <td>{{aprobacion.aprobado}}</td>
