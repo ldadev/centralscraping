@@ -39,6 +39,7 @@ class Revisor(models.Model):
 
 class Radicacion(models.Model):
 
+	radicacion_id = models.PositiveIntegerField(primary_key=True,verbose_name="Código de la radicación")
 	FechaRadicacion = models.DateField(verbose_name="Fecha de radicación")
 	revisor = models.ForeignKey(Revisor,on_delete=models.CASCADE,verbose_name="Revisor")
 	proveedor = models.ForeignKey(Proveedor,on_delete=models.CASCADE,verbose_name="Proveedor")
@@ -49,10 +50,11 @@ class Radicacion(models.Model):
 
 	
 	def __str__(self):
-		return f'{self.id}'
+		return f'{self.radicacion_id}'
 
 class Aprobacion(models.Model):
 
+	aprobacion_id = models.PositiveIntegerField(primary_key=True,verbose_name="Código de la aprobación")
 	radicacion = models.ForeignKey(Radicacion,on_delete=models.CASCADE,verbose_name="Radicacion")
 	aprobado =  models.CharField(max_length=50,verbose_name="Aprobado si/no")
 	FechaAprobado = models.DateField(verbose_name="Fecha de aprobación")

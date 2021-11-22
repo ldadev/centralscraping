@@ -9,17 +9,17 @@ from .models import Proveedor,Revisor,Radicacion,Aprobacion
 #admin.site.register(Aprobacion)
 
 @admin.register(Proveedor)
-class BookAdmin(admin.ModelAdmin):
+class ProveedorAdmin(admin.ModelAdmin):
     list_display = ('cod', 'name')
 
 @admin.register(Revisor)
-class BookAdmin(admin.ModelAdmin):
+class RevisorAdmin(admin.ModelAdmin):
      list_display = ('cod', 'name')
 
 @admin.register(Radicacion)
-class BookAdmin(admin.ModelAdmin):
-     list_display = ('Radicacion_id','FechaRadicacion', 'revisor','proveedor','NumeroFactura','ValorFactura','FechaFactura','Estamento')
+class RadicacionAdmin(admin.ModelAdmin):
+     list_display = ('radicacion_id','FechaRadicacion', 'revisor','proveedor','NumeroFactura','ValorFactura','FechaFactura','Estamento')
 
 @admin.register(Aprobacion)
-class BookAdmin(admin.ModelAdmin):
-         list_display = ('Aprobacion_id','radicacion', 'aprobado','FechaAprobado','aceptado')
+class AprobacionAdmin(admin.ModelAdmin):
+         list_display = ('aprobacion_id','radicacion', 'aprobado','FechaAprobado','aceptado')
