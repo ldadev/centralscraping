@@ -35,7 +35,7 @@ class AprobacionForm(forms.ModelForm):
 		fields = 'Aprobacion_Id','radicacion','aprobado','FechaAprobado','aceptado'
 		widgets = {
 		    'Aprobacion_Id':forms.TextInput(attrs={'placeholder':'Ingrese el código de la aprobación','class':'form-control'}),
-            'radicacion':forms.Select(choices=Radicacion.objects.all()),
+            'radicacion':forms.Select(choices=Radicacion.objects.all(),ayyrs={'placeholder':'Ingrese la radicación','class':'form-control'}),
             #'radicacion':TextInput(attrs={'placeholder':'Ingrese el código de la radicación','class':'form-control'}),
             'aprobado':forms.TextInput(attrs={'placeholder':'Ingrese si/no','class':'form-control'}),
             'FechaAprobado':forms.DateInput(attrs={'type':'date','class':'form-control'}),
