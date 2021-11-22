@@ -6,6 +6,7 @@ from .base import *
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -15,7 +16,28 @@ DATABASES = {
 }
 }
 
+"""
 
+
+DATABASES = {
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'central',
+
+        'USER': 'dadev',
+
+        'PASSWORD': '1580',
+
+        'HOST': 'localhost',
+
+        'PORT': '',
+
+    }
+
+}
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ['static/']
