@@ -18,8 +18,8 @@ class BookAdmin(admin.ModelAdmin):
 
 @admin.register(Radicacion)
 class BookAdmin(admin.ModelAdmin):
-     list_display = ('FechaRadicacion', 'revisor','proveedor','NumeroFactura','ValorFactura','FechaFactura','Estamento')
+     list_display = ('Radicacion_id','FechaRadicacion', 'revisor','proveedor','NumeroFactura','ValorFactura','FechaFactura','Estamento')
 
 @admin.register(Aprobacion)
 class BookAdmin(admin.ModelAdmin):
-         list_display = ('radicacion', 'aprobado','FechaAprobado','aceptado')
+         list_display = ('Aprobacion_id','radicacion', 'aprobado','FechaAprobado','aceptado')
