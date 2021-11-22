@@ -61,7 +61,7 @@ class RevisorListView(ListView):
 class revisor_create(LoginRequiredMixin,CreateView):
 	model = Revisor
 	form_class = RevisorForm
-	template_name = 'revisor_create.html'
+	template_name = 'course/revisor_create.html'
 	success_url = reverse_lazy('revisor_list')
 
 	def get_context_data(self,**kwargs):
