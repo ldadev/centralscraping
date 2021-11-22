@@ -22,7 +22,7 @@ class Teacher(models.Model):
 
 class Proveedor(models.Model):
 
-	cod = models.CharField(max_length=50,verbose_name="Id")
+	cod = models.CharField(max_length=50,verbose_name="Nit")
 	name = models.TextField(verbose_name="Nombre")
 	
 	def __str__(self):
@@ -49,7 +49,7 @@ class Radicacion(models.Model):
 
 	
 	def __str__(self):
-		return f'{self.NumeroFactura}'
+		return f'{self.id}'
 
 class Aprobacion(models.Model):
 
