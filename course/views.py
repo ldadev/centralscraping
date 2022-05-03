@@ -85,14 +85,14 @@ class revisor_update(LoginRequiredMixin,UpdateView):
 
 
 class revisor_delete(LoginRequiredMixin,DeleteView):
-    model = Revisor
-    template_name = 'course/revisor_delete.html'
-    success_url = reverse_lazy('revisor_list')
-    url_redirect = success_url
-
-
-    def get_context_data(self,**kwargs):
-    	context = super().get_context_data(**kwargs)
+	
+	model = Revisor
+	template_name = 'course/revisor_delete.html'
+	success_url = reverse_lazy('revisor_list')
+	url_redirect = success_url
+	
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
 		return context
 
 #Vistas de los proveedores
@@ -132,15 +132,15 @@ class proveedor_update(LoginRequiredMixin,UpdateView):
 		return context
 
 class proveedor_delete(LoginRequiredMixin,DeleteView):
-    model = Proveedor
-    template_name = 'course/proveedor_delete.html'
-    success_url = reverse_lazy('proveedor_list')
-    url_redirect = success_url
-
-
-    def get_context_data(self,**kwargs):
-    	context = super().get_context_data(**kwargs)
-    	return context
+	
+	model = Proveedor
+	template_name = 'course/proveedor_delete.html'
+	success_url = reverse_lazy('proveedor_list')
+	url_redirect = success_url
+	
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
 
 
 #Vistas de radicaciones
@@ -179,15 +179,15 @@ class radicacion_update(LoginRequiredMixin,UpdateView):
 		return context
 
 class radicacion_delete(LoginRequiredMixin,DeleteView):
-    model = Radicacion
-    template_name = 'course/radicacion_delete.html'
-    success_url = reverse_lazy('radicacion_list')
-    url_redirect = success_url
-
-
-    def get_context_data(self,**kwargs):
-    	context = super().get_context_data(**kwargs)
-    	return context
+	
+	model = Radicacion
+	template_name = 'course/radicacion_delete.html'
+	success_url = reverse_lazy('radicacion_list')
+	url_redirect = success_url
+	
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
 
 
 #Vistas de aprobaciones
@@ -226,12 +226,12 @@ class aprobacion_update(LoginRequiredMixin,UpdateView):
 		return context
 
 class aprobacion_delete(LoginRequiredMixin,DeleteView):
-    model = Aprobacion
-    template_name = 'course/aprobacion_delete.html'
-    success_url = reverse_lazy('aprobacion_list')
-    url_redirect = success_url
-
-
-    def get_context_data(self,**kwargs):
-    	context = super().get_context_data(**kwargs)
-    	return context
+	
+	model = Aprobacion
+	template_name = 'course/aprobacion_delete.html'
+	success_url = reverse_lazy('aprobacion_list')
+	url_redirect = success_url
+	
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
