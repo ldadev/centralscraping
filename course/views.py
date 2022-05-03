@@ -93,7 +93,7 @@ class revisor_delete(LoginRequiredMixin,DeleteView):
 
     def get_context_data(self,**kwargs):
     	context = super().get_context_data(**kwargs)
-    	return context
+		return context
 
 #Vistas de los proveedores
 
@@ -123,7 +123,7 @@ class proveedor_update(LoginRequiredMixin,UpdateView):
 
 	model = Proveedor
 	form_class = ProveedorForm
-	template_name = 'course/revisor_create.html'
+	template_name = 'course/proveedor_create.html'
 	success_url = reverse_lazy('proveedor_list')
 
 
